@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,400;1,500;1,700&display=swap');
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #2F5D62;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header h1 {
+    margin: 0;
+    color: #E5D549;
+}
+.header p {
+    margin: 10px;
+    color: #D3DE32;
+    font-size: 18px;
+}
+.main {
+    background-image: linear-gradient(to bottom, #2f5d62, #4c7677, #6a8f8d, #88a9a4, #a7c4bc);
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__formulario {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 20px 68px 50px;
+    min-height: 400px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.main .main__formulario h2 {
+    margin: 0;
+}
+.main__formulario form {
+    display: flex;
+    flex-direction: column;
+}
+.main__formulario--input {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.input {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0px 10px;
+    outline: none;
+    height: 20px;
+}
+.button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    width: 180px;
+    margin: 10px auto;
+}
+.button:hover {
+    border: 1px solid white;
+}
+.main p {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 200px;
+    right: 150px;
+}

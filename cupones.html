@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cupones.css">
+    <title>Descuentos con cupones</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Descuentos con cupones</h1>
+        <p>Reto con funciones inteligentes del curso práctico de JavaScript</p>
+    </header>
+    <main class="main">
+        <section class="main__formulario">
+            <h2>Calculo de valor del producto con cupon de descuento</h2>
+            <form action="" name="cupon">
+                <label for="inputPrecio">Ingresa el valor del producto</label>
+                <input type="text" id="inputPrecio" class="input">
+                <label for="inputCupon">Selecciona tu cupon</label>
+                <div class="main__formulario--input">
+                    <input type="radio" name="cupon" id="inputCupon" value="1">Aniversario
+                    <input type="radio" name="cupon" id="inputCupon" value="2">Cumpleaños
+                    <input type="radio" name="cupon" id="inputCupon" value="3">Ganga
+                </div>
+                <button class="button" type="button" onclick="buttonPrecioConCupon()">Calcular el precio con el descuento</button>
+            </form>
+        </section>
+        <p id="resultadoP"></p>
+    </main>
+    <script src="./cupones.js"></script>
+
+</body>
+</html>
