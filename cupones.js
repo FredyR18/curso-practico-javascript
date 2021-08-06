@@ -16,19 +16,19 @@ function buttonPrecioConCupon() {
 
     const inputCupon = document.cupon.inputCupon.value;
 
-    // let descuento;
+    let descuento;
 
-    // switch(inputCupon) {
-    //     case "1":
-    //         descuento = 30;
-    //     break;
-    //     case "2":
-    //         descuento = 20;
-    //     break;
-    //     case "3":
-    //         descuento = 40;
-    //     break;
-    // }
+    switch(inputCupon) {
+        case "1":
+            descuento = 30;
+        break;
+        case "2":
+            descuento = 20;
+        break;
+        case "3":
+            descuento = 40;
+        break;
+    }
     if (!cupones.includes(inputCupon)) {
         alert("El cupón " + inputCupon + "no es válido");
      } else if (inputCupon === "1") {
@@ -44,3 +44,43 @@ function buttonPrecioConCupon() {
     const resultadoP = document.getElementById("resultadoP");
     resultadoP.innerText = "El precio con descuento es: $" + precioConCupon;
 }
+
+
+// Código pendiente por revisar 
+
+// function buttonPrecioConCupon() {
+//     const inputPrecio = document.getElementById("inputPrecio");
+//     const precioValue = inputPrecio.value;
+
+//     const inputCupon = document.cupon.inputCupon.value;
+//     const coupons = [
+//         {
+//             name: "1",
+//             discount : 30,
+//         },
+//         {
+//             name: "2",
+//             discount : 30,
+//         },
+//         {
+//             name: "3",
+//             discount : 30,
+//         },
+//     ];
+
+//     function isCouponValueValid (cupon) {
+//         return coupons.name === inputCupon;
+//     };
+
+//     const userCoupon = coupons.find(isCouponValueValid);
+
+//     if (!userCoupon) {
+//         alert("El cupón " + inputCupon + " no es válido");
+//     } else {
+//         const descuento = userCoupon.discount;
+//         const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
+
+//         const resultadoP = document.getElementById("ResultadoP");
+//         resultadoP.innerText = "El precio con descuento es: $" + precioConDescuento;
+//     }
+// }
