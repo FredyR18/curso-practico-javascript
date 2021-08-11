@@ -1,64 +1,41 @@
-// Código del cuadrado
+// Código para el cuadrado
 
 console.group("Cuadrados");
-// const ladoCuadrado = 5;
-// console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
 
 function perimetroCuadrado(lado) {
     return lado * 4;
 }
-// console.log("El perímetro del cuadrado es: " + perimetroCuadrado + "cm");
 
 function areaCuadrado(lado) {
     return lado * lado;
 }
-// console.log("El área del cuadrado es: " + areaCuadrado + "cm^2");
+
 console.groupEnd();
 
-// Código del triángulo
+// Código para el triángulo
 
 console.group("Triángulos");
-// const ladoTriangulo1 = 6;
-// const ladoTriangulo2 = 6;
-// console.groupEnd();
-// const baseTriangulo = 4;
-
-// console.log(
-//     "Los lados de triángulo miden: " 
-//     + ladoTriangulo1 
-//     + "cm, "
-//     + ladoTriangulo2 
-//     + "cm, " 
-//     + baseTriangulo 
-//     + "cm,"
-// );
-// console.log("La altura del triángulo mide: " + alturaTriangulo + "cm");
 
 function perimetroTriangulo(lado1, lado2, base) {
-    return lado1 + lado2 + base;
+    return parseInt(lado1) + parseInt(lado2) + parseInt(base);
 }
-// console.log("El perímetro del triangulo es: " + perimetroTriangulo + "cm");
 
 function areaTriangulo(base , lado1) {
     const altura = Math.sqrt((lado1)**2 - (base/2)**2);
     return (base * altura) / 2;
 }
-// console.log("El area del triángulo es: " + areaTriangulo + "cm^2")
+
 console.groupEnd();
 
 // Código del círculo
 
 console.group("Círculos");
-// radio
-// const radioCirculo = 4;
-// console.log("El radio del círculo es: " + radioCirculo + "cm");
-// Diámetro
+
 function diametroCirculo(radio) {
     return radio * 2;
-};
-// console.log("El diametro del círculo es: " + diametroCirculo + "cm");
-// Pi, se puede de dos formas.
+}
 
+// Pi, se puede de dos formas.
 // const pi = 3.1416;
 const pi = Math.PI;
 
@@ -67,13 +44,11 @@ function perimetroCirculo(radio) {
     const diametro = diametroCirculo(radio);
     return diametro * pi;
 };
-// console.log("La circunferencia es: " + perimetroCirculo + "cm");
 
 // Área
 function areaCirculo(radio) {
     return (radio * radio) * pi;
-}; 
-// console.log("El área del círculo es: " + areaCirculo + "cm^2");
+}
 
 console.groupEnd();
 
@@ -84,7 +59,11 @@ function calcularPerimetroCuadrado() {
     const value = input.value;
 
     const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
+    if(perimetro == 0) {
+        alert("Valor incorrecto");
+    } else {
+        alert(perimetro);
+    }
 }
 function calcularAreaCuadrado() {
     const input = document.getElementById("inputCuadrado");
@@ -103,8 +82,13 @@ function calcularPerimetroTriangulo() {
     const input3 = document.getElementById("inputBaseTriangulo");
     const value3 = input3.value;
 
-    const perimetro = perimetroTriangulo(value1, value2, value3);
-    alert(perimetro);
+    const value4 = parseInt(value1) * parseInt(value2) * parseInt(value3);
+    if (value4 == 0) {
+        alert("Valor incorrecto");
+    } else {
+        const perimetro = perimetroTriangulo(value1, value2, value3);
+        alert(perimetro);
+    }
 }
 function calcularAreaTriangulo() {
     const input1 = document.getElementById("inputLado1Triangulo");

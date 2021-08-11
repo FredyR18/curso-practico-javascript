@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promedio | curso Práctico de JavaScript</title>
+    <link rel="stylesheet" href="promedio.css">
+    <title>Promedio, moda, mediana | curso Práctico de JavaScript</title>
 </head>
 <body>
-    <h1>Promedio</h1>
+    <header class="header">
+        <h1>Promedio, Moda, Mediana</h1>
+        <p>Calcula el promedio, la moda y la mediana de una serie de valores</p> 
+    </header>
+    <main class="main">
+        <section class="main__formulario">
+            <h2>Calculo del Promedio, Moda, Mediana</h2>
+            <form action="">
+                <label for="">Digite los valores</label>
+                <input type="number" class="input" id="inputValor">
+                <button class="button" type="button" onclick="ingresarValor()">Ingresar valor</button>
+                <button class="button" type="button" onclick="cacularPromedio()">Calcular el promedio</button>
+                <button class="button" type="button" onclick="cacularModa()">Calcular la moda</button>
+                <button class="button" type="button" onclick="cacularMediana()">Calcular la mediana</button>
+            </form>
+        </section>
+        <p id="resultadoP"></p>
+
+    </main>
 
     <script src="./promedio.js"></script>
 </body>

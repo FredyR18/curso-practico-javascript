@@ -8,41 +8,45 @@ body {
 .header {
     width: 100%;
     height: 100px;
-    background-color: #64C9CF;
-    display: flex;
-    align-items: center;
-}
-.header__title {
+    background-color: #D5EEBB;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 300px;
 }
 .header h1 {
     margin: 0;
+    color: #C3BA85;
 }
-.h2 {
-    margin: 0;
-    font-size: 20px;
+.header p {
+    margin: 10px;
+    font-size: 18px;
+    color: #C3BA85;
 }
 .main {
-    background-image: linear-gradient(to right bottom, #64c9cf, #7bd5bf, #a2deac, #cee39e, #fde49c);
-    min-height: calc(100vh - 100px);
-}
-.main__figurasGeo {
+    background-image: linear-gradient(to top, #7fc8a9, #95d2ac, #aadbb0, #c0e5b5, #d5eebb);
+    height: calc(100vh - 100px);
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.main__figurasGeo--all {
+.main__formulario {
     background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid white;
     border-radius: 40px;
     color: white;
     padding: 20px 68px 50px;
-    min-height: 400px;
+    min-height: 360px;
     width: 200px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.main .main__formulario h2 {
+    margin: 0;
+}
+.main__formulario form {
+    display: flex;
     flex-direction: column;
 }
 .input {
@@ -61,11 +65,11 @@ body {
     border-radius: 15px;
     color: white;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
-    height: 30px;
+    height: 40px;
     width: 180px;
-    margin: 5px auto;
+    margin: 10px auto;
 }
 .button:hover {
     border: 1px solid white;
